@@ -1,0 +1,38 @@
+{
+  "profiles": [
+    {
+      "name": "ROG Phone 8 Pro",
+      "preset": "rog8",
+      "detail": "basic",
+      "enabled": true,
+      "props": {
+        "ro.product.model": "ASUS_AI2401_D",
+        "ro.product.manufacturer": "asus",
+        "ro.product.brand": "asus",
+        "ro.product.device": "ASUS_AI2401"
+      },
+      "packages": [
+        "com.garena.game.df",
+        "com.tencent.ig"
+      ]
+    },
+    {
+      "name": "iPhone 18 Pro Max",
+      "preset": "ip18pm",
+      "detail": "full",
+      "enabled": true,
+      "props": {
+        "ro.product.model": "iPhone19,2",
+        "ro.product.manufacturer": "Apple",
+        "ro.product.brand": "Apple",
+        "ro.product.device": "iPhone19,2",
+        "ro.product.name": "iPhone19,2",
+        "ro.product.board": "iPhone19,2",
+        "ro.build.display.id": "iPhone19,2"
+      },
+      "packages": [
+        "com.mobile.legends"
+      ]
+    }
+  ]
+}

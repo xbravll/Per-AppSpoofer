@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>LNRSpoof</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="chrome">
+  <header class="topbar">
+    <div class="ttl">
+      <h1>LNRSpoof</h1>
+      <p id="sub"></p>
+    </div>
+    <div class="tools">
+      <button class="btn-icon lang" id="lang" data-act="lang" data-i18n-aria="aria.lang">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
+        <span id="langCode">EN</span>
+      </button>
+      <button class="btn-icon" id="refresh" data-act="refresh" data-i18n-aria="aria.refresh">
+        <svg viewBox="0 0 24 24"><path d="M20 11a8 8 0 10-2.3 5.7M20 4v7h-7"/></svg>
+      </button>
+    </div>
+  </header>
+  <nav class="tabs" role="tablist">
+    <button class="tab on" role="tab" data-tab="apps"><span data-i18n="tab.apps"></span><span class="count" id="cApps" hidden></span></button>
+    <button class="tab" role="tab" data-tab="dev"><span data-i18n="tab.dev"></span></button>
+    <button class="tab" role="tab" data-tab="act"><span data-i18n="tab.act"></span><span class="count" id="cAct" hidden></span></button>
+  </nav>
+</div>
+
+<main>
+  <section id="tab-apps">
+    <label class="field">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="search" data-i18n-ph="ph.apps" autocomplete="off" spellcheck="false">
+    </label>
+    <div class="filters" id="appFilters"></div>
+    <div id="appList"></div>
+  </section>
+
+  <section id="tab-dev" hidden>
+    <div class="panel">
+      <h2 class="panel-ttl" data-i18n="dev.scope"></h2>
+      <div class="seg" id="detailSeg"></div>
+      <p class="hint" id="detailHint"></p>
+    </div>
+    <label class="field">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="dq" type="search" data-i18n-ph="ph.dev" autocomplete="off" spellcheck="false">
+    </label>
+    <div class="filters" id="chips"></div>
+    <div id="devList"></div>
+  </section>
+
+  <section id="tab-act" hidden>
+    <div id="actList"></div>
+  </section>
+</main>
+
+<footer class="dock" id="dock"></footer>
+
+<div class="sheet-bg" id="sheetBg" data-act="closeSheet" hidden>
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="data.js"></script>
+<script src="core.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
