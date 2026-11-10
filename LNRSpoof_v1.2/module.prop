@@ -1,0 +1,6 @@
+id=lnr_spoofer
+name=LNRSpoof
+version=v1.2
+versionCode=6
+author=LENIRRAxZONE | xbravll 
+description=Per-app device spoofing via Zygisk. The Action button opens the WebUI to pick apps and devices.
